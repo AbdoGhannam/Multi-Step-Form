@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="resbonsive.css" />
+    <title>Multi-step form</title>
+  </head>
+  <body>
+    <div class="preloader"></div>
+    <div class="mob-sidebar">
+      <div class="mob-stepNum-container">
+        <div class="step-number" id="1"><h6>1</h6></div>
+        <div class="step-number" id="2"><h6>2</h6></div>
+        <div class="step-number" id="3"><h6>3</h6></div>
+        <div class="step-number" id="4"><h6>4</h6></div>
+      </div>
+    </div>
+    <main class="main-app">
+      <div class="sidebar">
+        <div class="step">
+          <div class="step-number" id="1"><h6>1</h6></div>
+          <div class="step-description">
+            <p>step 1</p>
+            <h4>your info</h4>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number" id="2"><h6>2</h6></div>
+          <div class="step-description">
+            <p>step 2</p>
+            <h4>select plan</h4>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number" id="3"><h6>3</h6></div>
+          <div class="step-description">
+            <p>step 3</p>
+            <h4>add-ons</h4>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number" id="4"><h6>4</h6></div>
+          <div class="step-description">
+            <p>step 4</p>
+            <h4>summary</h4>
+          </div>
+        </div>
+      </div>
+      <section class="main-step hidden" id="1">
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
+        <form class="step-form--1">
+          <p>Name</p>
+          <input
+            class="name-inp step-1--inp"
+            id="name"
+            type="text"
+            placeholder="e.g. Ahmad Al Ahmad"
+          />
+          <p class="message"></p>
+          <p>Email Adress</p>
+          <input
+            class="email-inp step-1--inp"
+            id="email"
+            type="text"
+            placeholder="e.g. ahmadalahmad03@gamil.com"
+          />
+          <p class="message"></p>
+          <p>Phone Number</p>
+          <input
+            class="phone-number-inp step-1--inp"
+            id="phone-num"
+            type="text"
+            value="+963 "
+          />
+          <p class="message"></p>
+          <button class="submit-btn--1 next-step">Next Step</button>
+        </form>
+      </section>
+      <section class="main-step hidden" id="2">
+        <h1>Select your plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
+        <div class="plans">
+          <div class="plan">
+            <img src="assets/images/icon-arcade.svg" />
+            <div>
+              <h3>Arcade</h3>
+              <div class="plan-price">
+                <p>$9/mo</p>
+                <p class="sale-out"></p>
+              </div>
+            </div>
+          </div>
+          <div class="plan">
+            <img src="assets/images/icon-advanced.svg" />
+            <div>
+              <h3>Advanced</h3>
+              <div class="plan-price">
+                <p>$12/mo</p>
+              </div>
+              <p class="sale-out"></p>
+            </div>
+          </div>
+          <div class="plan">
+            <img src="assets/images/icon-pro.svg" />
+            <div>
+              <h3>Pro</h3>
+              <div class="plan-price">
+                <p>$15/mo</p>
+              </div>
+              <p class="sale-out"></p>
+            </div>
+          </div>
+        </div>
+        <div class="toggle-form">
+          <p class="monthly-label toggled">Monthly</p>
+          <input
+            class="toggle-input"
+            type="checkbox"
+            name="switch"
+            id="switch"
+          />
+          <label class="toggle-label" for="switch"></label>
+          <p class="yearly-label">Yearly</p>
+        </div>
+        <h4 class="plan-error"></h4>
+        <button class="submit-btn--2 next-step">Next Step</button>
+        <button class="goback-btn--2 previos-step" id="2">Go Back</button>
+      </section>
+      <section class="main-step hidden" id="3">
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
+        <div class="add-ons-form">
+          <div class="ons">
+            <div class="ons-description">
+              <h4>Online service</h4>
+              <p>Access to multiplayer games</p>
+            </div>
+            <p class="ons-price" style="color: hsl(243, 100%, 62%)">$1/mo</p>
+          </div>
+          <div class="ons">
+            <div class="ons-description">
+              <h4>Larger storage</h4>
+              <p>Extra 1TB of cloud save</p>
+            </div>
+            <p class="ons-price" style="color: hsl(243, 100%, 62%)">$2/mo</p>
+          </div>
+          <div class="ons">
+            <div class="ons-description">
+              <h4>Customizable profile</h4>
+              <p>Custom theme on your profile</p>
+            </div>
+            <p class="ons-price" style="color: hsl(243, 100%, 62%)">$2/mo</p>
+          </div>
+        </div>
+        <button class="submit-btn--3 next-step">Next Step</button>
+        <button class="goback-btn--3 previos-step" id="3">Go Back</button>
+      </section>
+      <section class="main-step hidden" id="4">
+        <h1>Finishing up</h1>
+        <p>Double-check everthing looks OK before confirming</p>
+        <div class="summary">
+          <div class="choosen-plan-sec">
+            <div class="choosen-plan">
+              <div>
+                <h4 class="choosen-plan-name"></h4>
+                <p><a href="">change</a></p>
+              </div>
+              <h4 class="choosen-plan-price"></h4>
+            </div>
+            <div class="gray-line"></div>
+            <div class="choosen-ons-sec"></div>
+          </div>
+          <div class="total-sec">
+            <p>Total (per month)</p>
+            <h2 style="color: hsl(243, 100%, 62%)">+$12/mo</h2>
+          </div>
+        </div>
+        <button class="submit-btn--4 next-step">Confirm</button>
+        <button class="goback-btn--4 previos-step" id="4">Go Back</button>
+      </section>
+      <section class="thank-you-screen hidden">
+        <img src="assets/images/icon-thank-you.svg" />
+        <h1>Thank You!</h1>
+        <p>
+          Thanks <span class="thanks-name"></span> for confirming your
+          subsciption! We hope you have fun usin our platform. If you ever need
+          support, please feel free to email us at support@fakemail.com .
+        </p>
+      </section>
+    </main>
+    <script src="sctipt.js"></script>
+  </body>
+</html>

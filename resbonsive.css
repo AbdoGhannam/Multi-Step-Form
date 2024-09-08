@@ -1,0 +1,111 @@
+@media (max-width: 500px) {
+  body {
+    position: relative;
+  }
+
+  .main-app {
+    width: 95%;
+    position: static;
+    translate: 2.5% 100px;
+    /* top: 300px; */
+    /* right: auto; */
+    /* top: auto; */
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .mob-sidebar {
+    display: block;
+    background: url(assets/images/bg-sidebar-mobile.svg);
+    width: 100%;
+    height: 160px;
+    position: absolute;
+    top: 0;
+    color: white;
+  }
+
+  .mob-stepNum-container {
+    display: flex;
+    width: 200px;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 25px;
+    right: 50%;
+    translate: 50% 50%;
+  }
+
+  .step-number {
+    margin: 0;
+  }
+
+  .main-step {
+    width: 95%;
+    translate: 20px 30px;
+  }
+
+  .step-form--1 {
+    margin: 0;
+  }
+
+  .next-step {
+    bottom: -70px;
+    right: 10px;
+  }
+
+  .previos-step {
+    bottom: -60px;
+  }
+
+  .plans {
+    flex-direction: column;
+    margin-top: 0;
+    width: auto;
+    transform: translateX(-10px);
+  }
+
+  .plan {
+    width: 90%;
+    padding: 14px;
+    line-height: normal;
+    display: flex;
+    align-items: start;
+    margin-top: 14px;
+  }
+
+  .plan img {
+    margin: 0;
+    margin-right: 16px;
+  }
+
+  .plan h3 {
+    margin-right: 12px;
+  }
+
+  .sale-out {
+    line-height: normal;
+  }
+
+  .ons {
+    width: 95%;
+  }
+
+  .add-ons-form {
+    margin-bottom: 12px;
+  }
+
+  .summary {
+    width: 95%;
+  }
+
+  .thank-you-screen {
+    width: 80%;
+    position: static;
+    margin: 30px;
+    translate: 10px 20px;
+  }
+}
